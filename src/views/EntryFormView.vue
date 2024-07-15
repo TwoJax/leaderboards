@@ -1,7 +1,7 @@
 <template>
   <div class="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
-      <img src="../assets/images/1password-logo-primary.png" alt="1Password primary logo" class="mx-auto h-10 w-auto">
+      <img src="../assets/images/1password-primary-logo.svg" alt="1Password primary logo" class="mx-auto h-10 w-auto">
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-4xl">

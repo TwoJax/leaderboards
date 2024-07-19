@@ -1,9 +1,13 @@
 <template>
-  <main ref="main" class="h-full p-4 bg-no-repeat bg-top preload">
+  <main ref="main" class="h-full py-12 p-4 bg-no-repeat bg-top preload">
+    <div class="sm:mx-auto sm:w-full sm:max-w-md">
+      <img src="../assets/images/1password-primary-logo.svg" alt="1Password primary logo" class="mx-auto h-12 w-auto">
+    </div>
+
     <table class="table-auto w-full border-separate border-spacing-y-2.5">
       <thead>
         <tr>
-          <th class="border-b border-cloud py-2 font-light text-left text-cloud uppercase pl-32">Name</th>
+          <th class="border-b border-cloud py-2 font-light text-left text-cloud uppercase pl-32">Username</th>
           <th class="border-b border-cloud py-2 font-light text-right text-cloud pr-16 uppercase">Time</th>
         </tr>
       </thead>

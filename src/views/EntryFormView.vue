@@ -8,6 +8,17 @@
       <div class="bg-cloud py-12 px-6 shadow sm:rounded-lg sm:px-12">
         <form action="" class="space-y-6">
           <div class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div class="sm:col-span-6">
+              <label for="username" class="block text-sm-font-medium leading-6 text-iron-ore">Username</label>
+
+              <div class="mt-2">
+                <input v-model="timeEntry.username" type="text" id="username" name="username"
+                  class="block w-full rounded-md border-0 p-1.5 text-iron-ore shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-bits-blue sm:text-sm sm:leading-6">
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div class="sm:col-span-3">
               <label for="first_name" class="block text-sm-font-medium leading-6 text-iron-ore">First name</label>
 
@@ -87,6 +98,7 @@ const timeEntrySchema = {
   id: '',
   first_name: '',
   last_name: '',
+  username: '',
   minutes: '',
   seconds: '',
 };

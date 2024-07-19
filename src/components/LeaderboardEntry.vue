@@ -4,7 +4,7 @@
 
     <div class="py-4 flex flex-col flex-1">
       <div class="text-iron-ore text-2xl">
-        {{ timeEntry.first_name }} {{ timeEntry.last_name }}
+        {{ timeEntry.username }}
       </div>
     </div>
 

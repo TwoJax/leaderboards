@@ -8,7 +8,7 @@
       <thead>
         <tr>
           <th class="border-b border-cloud py-2 font-light text-left text-cloud uppercase pl-32">Username</th>
-          <th class="border-b border-cloud py-2 font-light text-right text-cloud pr-16 uppercase">Time</th>
+          <th class="border-b border-cloud py-2 font-light text-right text-cloud pr-16 uppercase">Score</th>
         </tr>
       </thead>
     </table>

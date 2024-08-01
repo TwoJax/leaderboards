@@ -8,8 +8,8 @@
       </div>
     </div>
 
-    <div class="font-semibold text-iron-ore text-lg pr-16 py-4 rounded-br-lg rounded-tr-lg text-right">{{ timeEntry.time
-      }}</div>
+    <div class="font-semibold text-iron-ore text-lg pr-16 py-4 rounded-br-lg rounded-tr-lg text-right">{{
+      timeEntry.score }}</div>
   </li>
 </template>
 

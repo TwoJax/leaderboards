@@ -50,27 +50,12 @@
           </div>
 
           <div class="mt-10 flex items-center">
-            <div class="w-28">
-              <label for="minutes" class="block text-sm-font-medium leading-6 text-iron-ore">Minutes</label>
+            <div class="sm:col-span-3">
+              <label for="score" class="block text-sm-font-medium leading-6 text-iron-ore">Score</label>
 
               <div class="mt-2">
-                <input v-model="timeEntry.minutes" type="number" id="minutes" name="minutes" inputmode="numeric" min="0"
-                  pattern="[-+]?[0-9]*[.,]?[0-9]+"
-                  class="block w-full rounded-md border-0 p-1.5 text-iron-ore shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-bits-blue sm:text-sm sm:leading-6"
-                  @blur="validateMinutes">
-              </div>
-            </div>
-
-            <div class="mb-2 mx-3 self-end">:</div>
-
-            <div class="w-28">
-              <label for="seconds" class="block text-sm-font-medium leading-6 text-iron-ore">Seconds</label>
-
-              <div class="mt-2">
-                <input v-model="timeEntry.seconds" type="number" id="seconds" name="seconds" inputmode="numeric"
-                  max="59" min="0" pattern="[-+]?[0-9]*[.,]?[0-9]+"
-                  class="block w-full rounded-md border-0 p-1.5 text-iron-ore shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-bits-blue sm:text-sm sm:leading-6"
-                  @blur="validateSeconds">
+                <input v-model="timeEntry.score" type="number" id="score" name="score"
+                  class="block w-full rounded-md border-0 p-1.5 text-iron-ore shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-bits-blue sm:text-sm sm:leading-6">
               </div>
             </div>
           </div>
@@ -99,8 +84,7 @@ const timeEntrySchema = {
   first_name: '',
   last_name: '',
   username: '',
-  minutes: '',
-  seconds: '',
+  score: '',
 };
 
 const timeEntry = ref({ ...timeEntrySchema });
@@ -111,17 +95,5 @@ function addTimeEntry() {
   store.addTimeEntry({ ...timeEntry.value, time: time.value }).then(() => {
     timeEntry.value = { ...timeEntrySchema };
   });
-}
-
-function validateMinutes() {
-  const minutes = Math.max(timeEntry.value.minutes, 0);
-
-  timeEntry.value.minutes = minutes.toLocaleString('en-US', { minimumIntegerDigits: 2 });
-}
-
-function validateSeconds() {
-  const seconds = Math.min(timeEntry.value.seconds, 59);
-
-  timeEntry.value.seconds = seconds.toLocaleString('en-US', { minimumIntegerDigits: 2 });
 }
 </script>
